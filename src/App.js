@@ -10,7 +10,8 @@ class App extends Component {
     manager: '',
     players: [],
     balance: '',
-    value: ''
+    value: '',
+    data: []
   }
 
   async componentDidMount() {
@@ -41,7 +42,7 @@ class App extends Component {
     return (
       <div>
       <h2>Lottery Contract</h2>
-      <p> This contract is managed by { this.state.manager }
+      <p> { this.state.data[1] }This contract is managed by { this.state.manager }
           There are currently { this.state.players.length } people enter and
           competing to { web3.utils.fromWei(this.state.balance, 'ether') } win ether !
       </p>
